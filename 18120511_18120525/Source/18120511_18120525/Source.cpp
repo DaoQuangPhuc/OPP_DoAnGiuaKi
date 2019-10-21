@@ -28,7 +28,7 @@ int main() {
 	Map map; //Khoi tao map
 	Player player1 = Player(1, MAX_WIDTH/2); //Khoi tao nguoi choi 1 nam giua sat mep tren
 	Player player2 = Player(MAX_HEIGHT-2, MAX_WIDTH/2); //Khoi tao nguoi choi 2 nam giua sat mep duoi
-	Ball ball = Ball(25, MAX_WIDTH/2); //Khoi tao bong o giua man hinh choi
+	Ball ball = Ball(MAX_HEIGHT/2, MAX_WIDTH/2); //Khoi tao bong o giua man hinh choi
 
 	map.SetMapObject(player1, player2, ball); //Dat cac object vao man hinh choi
 	map.PrintMap(); //Xuat ra man hinh choi

@@ -32,6 +32,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 			posH--;
 			posW++;
 			direction = DIR_RIGHT_DOWN;
+			autoMove(direction, player1, player2, time);
 		}
 		//Neu cham bien ngang thi dung lai va tra ve gia tri nguoi choi 1 thang
 		else if (posH == MAX_HEIGHT - 1) {
@@ -46,6 +47,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 				posW++;
 				time -= temp;
 				direction = DIR_LEFT_UP;
+				autoMove(direction, player1, player2, time);
 			}
 		}
 		break;
@@ -57,6 +59,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 			posH++;
 			posW++;
 			direction = DIR_RIGHT_UP;
+			autoMove(direction, player1, player2, time);
 		} 
 		//Neu cham bien ngang thi dung lai va tra ve gia tri nguoi choi 2 thang
 		else if (posH == 0) {
@@ -71,6 +74,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 				posW++;
 				time -= temp;
 				direction = DIR_LEFT_DOWN;
+				autoMove(direction, player1, player2, time);
 			}
 		}
 		break;
@@ -82,6 +86,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 			posH--;
 			posW--;
 			direction = DIR_LEFT_DOWN;
+			autoMove(direction, player1, player2, time);
 		}
 		//Neu cham bien ngang thi dung lai va tra ve gia tri nguoi choi 1 thang
 		else if (posH == MAX_HEIGHT - 1) {
@@ -96,6 +101,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 				posW++;
 				time -= temp;
 				direction = DIR_RIGHT_UP;
+				autoMove(direction, player1, player2, time);
 			}
 		}
 		break;
@@ -107,6 +113,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 			posH++;
 			posW--;
 			direction = DIR_LEFT_UP;
+			autoMove(direction, player1, player2, time);
 		} 
 		//Neu cham bien ngang thi dung lai va tra ve gia tri nguoi choi 2 thang
 		else if (posH == 0) {
@@ -121,6 +128,7 @@ int Ball::autoMove(int& direction, Player player1, Player player2, int& time) {
 				posW--;
 				time -= temp;
 				direction = DIR_RIGHT_DOWN;
+				autoMove(direction, player1, player2, time);
 			}
 		}
 		break;
